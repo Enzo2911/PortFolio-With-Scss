@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Shippori+Mincho:wght@400;700&display=swap');
+
+$web_width: 1280px;
+$primary_color: #7dff31;
+$light_color: white;
+$dark_color: black;
+$main_bg: url("https://cdn.glitch.com/d10ee498-0355-4544-8283-4cd5d0a6e38c%2Fbg-masthead.jpg?v=1604913489247");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $primary_color;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+// Utilitaires 
+
+%btn_prop_shared {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.7s;
+}
+
+.container {
+    max-width: $web_width;
+    margin: auto;
+    overflow: hidden;
+}
+
+.section_title {
+    font-size: 2.2rem; 
+    padding-bottom: 0.5rem;
+}
+
+.section_text { font-size: 1.2rem; }
+
+.text_center { text-align: center; }
+
+.ptb {
+    &_1 { padding: 1rem; }
+    &_2 { padding: 2rem; }
+    &_3 { padding: 3rem; }
+    &_4 { padding: 4rem; }
+    &_5 { padding: 5rem; }
+}
+
+// Navigation
+
+.main_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $dark_color;
+    padding: 0.5rem 1rem;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    padding: 1rem 1.5rem
+}
+
+a {
+    color: beige;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px transparent dashed;
+    transition: border-color 1s;
+
+    .logo_title {
+        padding: 5px 0 0 0;
+        color: beige;
+        text-transform: none;
+        font-size: 1.6rem;
+        font-family: 'Pacifico', recursive;
+    }
+
+    &:hover {
+        border-color: $primary_color;
+    }
+
+    &.home {
+        border-color: $primary_color;
+    }
+}
+
+// Header 
+
+.header {
+    background: $main_bg no-repeat center top/cover;
+    height: 90.7vh;
+    color: white;
+
+    .header_content {
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5.5rem;
+
+        .cta_title {
+            font-size: 4.5rem;
+        }
+
+        .cta_catch {
+            font-size: 1.2rem;
+            padding: 0.6rem 0 2.2rem 0;
+        }
+
+        .btn {
+            &_cta {
+                @extend %btn_prop_shared;
+                color: $dark_color;
+                background-color: $primary_color;
+
+                &:hover {
+                    color: $primary_color;
+                    background-color: $dark_color;
+                }
+            }
+        }
+    }
+}
+
+// Section "Projects"
+
+.section_projects {
+    background-color: #fdfdfd;
+
+    .projects {
+        margin-top: 3rem;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+
+        div { margin: 0 0.5rem; }
+
+        .fas {
+            color: $primary_color;
+            background-color: $dark_color;
+            padding: 0.7rem 1rem;
+            margin-bottom: 0.7rem;
+            border-radius: 50%;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.4rem;
+        }
+    }
+}

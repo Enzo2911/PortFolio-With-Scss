@@ -1,0 +1,15 @@
+{
+  "name": "portefollio_scss",
+  "version": "0.1.0",
+  "description": "Site Portfolio avec SASS et Flexbox",
+  "main": "main.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Enzo2911",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
